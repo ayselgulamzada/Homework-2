@@ -119,29 +119,23 @@ that you've install \texttt{tinytex} package onto your system with
 
 \textbf{Question 1} Calculate how many minutes in January.
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Write Your Answer Here!}
-\end{Highlighting}
-\end{Shaded}
-
 \textbf{Question 2} Add the numbers 3 1 4 1 5 9 2 6 without \emph{using
 the addition sign}.
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\CommentTok{\# Write Your Answer Here!}
-\end{Highlighting}
-\end{Shaded}
 
 \textbf{Question 3} Create a vector named \texttt{x} containing the
 series -1, -0.9, \ldots, 0, 0.1, \ldots, 0.9, 1 and print the result.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Write Your Answer Here!}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{seq}\NormalTok{(}\SpecialCharTok{{-}}\DecValTok{1}\NormalTok{, }\DecValTok{1}\NormalTok{, }\AttributeTok{by =}\NormalTok{ .}\DecValTok{1}\NormalTok{)}
+\NormalTok{x}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+##  [1] -1.0 -0.9 -0.8 -0.7 -0.6 -0.5 -0.4 -0.3 -0.2 -0.1  0.0  0.1  0.2  0.3  0.4
+## [16]  0.5  0.6  0.7  0.8  0.9  1.0
+\end{verbatim}
 
 \textbf{Question 4} How do we get R to print the text ``SBF!'' 30 times
 without repeatingly typing it?
@@ -159,27 +153,85 @@ George and Sirius, while the ``ranking'' includes the numbers 4, 2, 5,
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Write Your Answer Here!}
+\NormalTok{wizards }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Harry"}\NormalTok{, }\StringTok{"Ron"}\NormalTok{, }\StringTok{"Fred"}\NormalTok{, }\StringTok{"George"}\NormalTok{, }\StringTok{"Sirius"}\NormalTok{)}
+\NormalTok{wizards}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+## [1] "Harry"  "Ron"    "Fred"   "George" "Sirius"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{ranking }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{4}\NormalTok{, }\DecValTok{2}\NormalTok{, }\DecValTok{5}\NormalTok{, }\DecValTok{1}\NormalTok{, }\DecValTok{3}\NormalTok{)}
+\NormalTok{ranking}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 4 2 5 1 3
+\end{verbatim}
 
 \textbf{Question 6} Print/extract the second element of the wizards
 vector.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Write Your Answer Here!}
+\NormalTok{wizards[}\StringTok{"Ron"}\NormalTok{]}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+## [1] NA
+\end{verbatim}
 
 \textbf{Question 7} Replace the names Fred, George and Sirius in the
 vector `wizards' with the names Hermione, Ginny, and Malfoy.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Write Your Answer Here!}
+\NormalTok{wizards }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\StringTok{"Harry"}\NormalTok{, }\StringTok{"Ron"}\NormalTok{, }\StringTok{"Fred"}\NormalTok{, }\StringTok{"George"}\NormalTok{, }\StringTok{"Sirius"}\NormalTok{)}
+\NormalTok{wizards}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+## [1] "Harry"  "Ron"    "Fred"   "George" "Sirius"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{y }\OtherTok{\textless{}{-}} \FunctionTok{replace}\NormalTok{(wizards, }\DecValTok{3}\NormalTok{ , }\StringTok{"Hermione"}\NormalTok{)}
+\NormalTok{y}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Harry"    "Ron"      "Hermione" "George"   "Sirius"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{x }\OtherTok{\textless{}{-}} \FunctionTok{replace}\NormalTok{(y, }\DecValTok{4}\NormalTok{, }\StringTok{"Ginny"}\NormalTok{)}
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Harry"    "Ron"      "Hermione" "Ginny"    "Sirius"
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{wizards }\OtherTok{\textless{}{-}} \FunctionTok{replace}\NormalTok{(x, }\DecValTok{5}\NormalTok{, }\StringTok{"Malfoy"}\NormalTok{)}
+\NormalTok{wizards}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] "Harry"    "Ron"      "Hermione" "Ginny"    "Malfoy"
+\end{verbatim}
 
 \textbf{Question 8} Anyone who hasn't read Harry Potter (like the
 professor of this class) needs tags to know who these characters are.
@@ -201,9 +253,45 @@ range of exam grades.
 
 \begin{Shaded}
 \begin{Highlighting}[]
-\CommentTok{\# Write Your Answer Here!}
+\NormalTok{scores }\OtherTok{\textless{}{-}} \FunctionTok{c}\NormalTok{(}\DecValTok{18}\NormalTok{, }\DecValTok{95}\NormalTok{, }\DecValTok{76}\NormalTok{, }\DecValTok{90}\NormalTok{, }\DecValTok{84}\NormalTok{, }\DecValTok{83}\NormalTok{, }\DecValTok{80}\NormalTok{, }\DecValTok{79}\NormalTok{, }\DecValTok{63}\NormalTok{, }\DecValTok{76}\NormalTok{, }\DecValTok{55}\NormalTok{, }\DecValTok{78}\NormalTok{, }\DecValTok{90}\NormalTok{, }\DecValTok{81}\NormalTok{, }\DecValTok{88}\NormalTok{, }\DecValTok{89}\NormalTok{, }\DecValTok{92}\NormalTok{, }\DecValTok{73}\NormalTok{, }\DecValTok{83}\NormalTok{, }\DecValTok{72}\NormalTok{, }\DecValTok{85}\NormalTok{, }\DecValTok{66}\NormalTok{, }\DecValTok{77}\NormalTok{, }\DecValTok{82}\NormalTok{, }\DecValTok{99}\NormalTok{, }\DecValTok{87}\NormalTok{)}
+\NormalTok{scores}
 \end{Highlighting}
 \end{Shaded}
+
+\begin{verbatim}
+##  [1] 18 95 76 90 84 83 80 79 63 76 55 78 90 81 88 89 92 73 83 72 85 66 77 82 99
+## [26] 87
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{mean}\NormalTok{(scores)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 78.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{median}\NormalTok{(scores)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 81.5
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{range}\NormalTok{(scores)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 18 99
+\end{verbatim}
 
 \textbf{Question 10} In 2015, Nilay had an annual income of 22,000 TL,
 and total expenses of 3,000 TL. In 2016, his annual income was 67,000
