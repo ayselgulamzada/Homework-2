@@ -13,18 +13,24 @@ opts_chunk$set(fig.align="center", fig.height=4, fig.width=5.5)
 ```
 
 **Before attempting to solve these homework questions make sure that you've install `tinytex` package onto your system with `install.packages(tinytex)` and `tinytex::install_tinytex()` commands.**
+tinytex::pdflatex('test.tex')
 
 \vspace{1cm}
 
 **Question 1** Calculate how many minutes in January.
 
 ```{r}
-
+hours <- 24 * 31
+hours
+minutes <- hours * 60
+minutes
 ```
 
 **Question 2** Add the numbers 3 1 4 1 5 9 2 6 without *using the addition sign*.
 
 ```{r}
+x <- c(3, 1, 4, 1, 5, 9, 2, 6)
+sum(x)
 ```
 
 **Question 3** Create a vector named `x` containing the series -1, -0.9, ..., 0, 0.1, ..., 0.9, 1 and print the result.
@@ -32,12 +38,15 @@ opts_chunk$set(fig.align="center", fig.height=4, fig.width=5.5)
 ```{r}
 x <- seq(-1, 1, by = .1)
 x
+print(x)
 ```
 
 **Question 4** How do we get R to print the text "SBF!" 30 times without repeatingly typing it?
 
 ```{r}
-# Write Your Answer Here!
+x <- rep("SBF", 30)
+x
+print(x)
 ```
 
 **Question 5** Create two vectors named "wizards" and "ranking".
@@ -54,6 +63,8 @@ ranking
 
 ```{r}
 wizards["Ron"]
+print(wizards["Ron"])
+
 ```
 
 **Question 7** Replace the names Fred, George and Sirius in the vector 'wizards' with the names Hermione, Ginny, and Malfoy.
@@ -74,7 +85,8 @@ Name the elements of the `wizards` vector as **Lead**, **Friend**, **Friend**, *
 Print the results.
 
 ```{r}
-# Write Your Answer Here!
+wizards <- c("Harry", "Ron", "Fred", "George", "Sirius")
+wizards
 ```
 
 **Question 9** 26 students entered the PEC206 midterm exam.
