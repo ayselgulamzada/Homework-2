@@ -64,7 +64,6 @@ ranking
 ```{r}
 wizards["Ron"]
 print(wizards["Ron"])
-
 ```
 
 **Question 7** Replace the names Fred, George and Sirius in the vector 'wizards' with the names Hermione, Ginny, and Malfoy.
@@ -110,5 +109,12 @@ To save this information, create 3 different vectors named 'years', 'income' and
 Calculate Nilay's annual savings and save these values in a vector named 'savings'.
 
 ```{r}
-# Write Your Answer Here!
+years <- c(2015, 2016, 2017, 2018)
+years
+income <- c(22000, 67000, 70000, 72000)
+income
+expenses <- c(3000, 23000, 32000, 35000)
+expenses
+savings <- income - expenses
+savings
 ```
